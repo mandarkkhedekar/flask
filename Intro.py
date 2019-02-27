@@ -1,5 +1,5 @@
 from flask import Flask
-app =  Flask (__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
@@ -10,9 +10,9 @@ def hello():
 def tuna():
     return('<h1>I love Tuna</h1>')
 
-@app.route('/profile/<username>')
-def profile(username):
-    return "Hello %s" %username
+@app.route('/hello/<username>')
+def hello_name(username):
+   return 'Hello %s!' % username
 
 
 @app.route('/post/<int:post_id>')
